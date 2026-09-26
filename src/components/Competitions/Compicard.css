@@ -1,0 +1,35 @@
+/* The row must stretch to allow full-height images */
+.compi-row {
+  min-height: 250px; /* Reduced from 350px */
+}
+
+/* Remove padding from the right column so the image hits the edge */
+.card-right {
+  padding: 0 !important;
+  overflow: hidden; 
+  display: flex;
+}
+
+/* Force the image to act like a full-bleed frame */
+.card-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  min-height: 250px; /* Reduced from 350px */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .compi-row {
+    min-height: auto;
+  }
+  .card-right img {
+    min-height: 200px; /* Scaled down for mobile */
+  }
+}
+
+@media (max-width: 425px) {
+  .display-4 {
+    font-size: 2rem; 
+  }
+}

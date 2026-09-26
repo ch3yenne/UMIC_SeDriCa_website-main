@@ -1,0 +1,37 @@
+/* --- Subsystems.css --- */
+
+/* The row must stretch to allow full-height images */
+.subsystem-row {
+  min-height: 250px;
+}
+
+/* Remove padding from the image column so it hits the edge */
+.card-right {
+  padding: 0 !important;
+  overflow: hidden; 
+  display: flex;
+}
+
+/* Force the image to act like a full-bleed frame */
+.card-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the image perfectly to fill the space */
+  min-height: 250px; /* Ensures all images are the exact same height */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .subsystem-row {
+    min-height: auto;
+  }
+  .card-right img {
+    min-height: 200px; /* Scaled down for mobile */
+  }
+}
+
+@media (max-width: 425px) {
+  .display-4 {
+    font-size: 2rem; 
+  }
+}

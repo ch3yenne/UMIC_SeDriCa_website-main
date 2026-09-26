@@ -1,0 +1,9 @@
+/* --- GLOBAL PARAGRAPH & TEXT FONT --- */
+body, p, a, span, li, button, input {
+  font-family: "Neue Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* --- GLOBAL TITLE & HEADING FONT --- */
+h1, h2, h3, h4, h5, h6, .title, .heading {
+  font-family: "Neue Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}

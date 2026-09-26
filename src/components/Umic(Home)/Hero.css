@@ -1,0 +1,71 @@
+/* --- Hero.css --- */
+
+/* Standardize Carousel Image Sizing */
+.carousel-item {
+  height: 85vh;
+  min-height: 400px;
+  background-color: #000; /* Sleek dark backdrop */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents squishing/stretching */
+  opacity: 0.7; /* Slight dimming so text pops */
+  transition: transform 6s ease; /* Very subtle slow zoom effect on the image */
+}
+
+/* Elegant Text Placement & Styling */
+.caption, .caption2 {
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  color: #fff;
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8); /* Replaces tacky background blocks */
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.caption h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 4rem); /* Auto-scales cleanly on mobile */
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.caption2 h3 {
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  letter-spacing: 1px;
+}
+
+/* Smooth Fade-Up Animation */
+.carousel-item.active .caption {
+  animation: fadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 0.2s;
+}
+.carousel-item.active .caption2 {
+  animation: fadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle, Normal-Sized Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+}
